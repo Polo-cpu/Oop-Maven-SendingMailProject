@@ -4,7 +4,7 @@ import com.SendMail.SendMail;
 
 public class StudentToDB implements ICustomer{
     private final MyDb mydatabase = new MyDb("student_info");
-    private static final SendMail mail = new SendMail(023200000,"studentEmail");
+    private static final SendMail mail = new SendMail(023200000,"sendToMail");
     private String name;
     private int number;
     private String student_class;
@@ -62,7 +62,7 @@ public class StudentToDB implements ICustomer{
 
     @Override
     public void sendto() {
-        mail.send(getNumber(),"wepla14_31@hotmail.com");
+        mail.send(getNumber(),"sendtomail@hotmail.com");
     }
 
     public static void main(String[] args) {

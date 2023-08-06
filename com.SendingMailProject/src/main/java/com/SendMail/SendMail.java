@@ -34,8 +34,8 @@ public class SendMail {
         this.email = email;
     }
     public void send(int number, String sendToMail){
-        final String userName = "berkatilla46@hotmail.com";
-        final String password = "berk1881*";
+        final String userName = "yourmail@hotmail.com";
+        final String password = "*******";
         DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Date today = new Date();
         Properties propertiesObj = new Properties();
@@ -55,7 +55,7 @@ public class SendMail {
         });
         try {
             Message messageObj = new MimeMessage(sessionObj);
-            messageObj.setFrom(new InternetAddress("berkatilla46@hotmail.com"));
+            messageObj.setFrom(new InternetAddress("yourmail@hotmail.com"));
             messageObj.setRecipients(Message.RecipientType.TO, InternetAddress.parse(sendToMail));
             messageObj.setSubject("Absenteeism");
             messageObj.setText(number + "Has absent today : " + today );
